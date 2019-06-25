@@ -1,0 +1,379 @@
+<!--RESOURCES & CITATIONS-->
+      <!-- BIG THANKS TO CREATER OF THIS TEMPLATE!-->
+      <!-- https://codepen.io/Puika/pen/qvunr-->
+
+      <!--FOR GETTING SCREEN SIZES-->
+      <!-- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_screen_all -->
+
+      <!--FOR FIGURING OUT HOW TO CHANGE SIZES OF ELEMENTS WITH SMALLER SCREENS-->
+      <!-- https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_columns -->
+
+      <!--https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/create_a_website_layout_with_flexbox_example_1-->
+
+      <!-- FOR PREVENTING USERS FROM ZOOMING IN ON MOBILE BECAUSE IT BREAKS THE STICKY SCROLL? -->
+      <!-- https://stackoverflow.com/questions/4472891/how-can-i-disable-zoom-on-a-mobile-web-page -->
+      
+      <!-- FOR GRABBING AND DISPLAYING THE DATE & TIME -->
+      <!-- https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html -->
+      <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2 -->
+      
+      <!-- https://divtable.com/table-styler/ -->
+
+
+<!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_td_colspan -->
+<!-- END RESOURCES & CITATIONS -->
+
+<!DOCTYPE HTML>
+<!-- BROWSER TAB TEXT -->
+<title id = "title_piece">MSTR'S BLOG</title>
+<html>
+<style>
+/* ADD THE CUSTOM FONT */
+@font-face 
+		{ 
+			font-family:	Munro; src: url('munro.TTF'); 
+			/* THIS IS THE 'RETRO TEXT' */
+		}
+
+/* MASTER PAGE PROPERTIES */
+* 
+	{
+		font-family: 		Munro;
+  }
+
+/* //////////////////////////////////////////////////// */
+/* FOR RESIZING NAVBAR WHEN SCROLLING IN SMALLER & larger SCREENS */
+
+/* On screens that are 992px wide or less.... */
+@media screen and (max-width: 1200px) 
+{
+  .sticky
+  {
+    position:     fixed;
+    top:          0;
+    width:        98.1%;
+    /* height:       3.5%; */
+    /* width: 50%; */
+  }
+}
+/* ////////////////////////// */
+/* On screens that are 992px wide or less.... */
+@media screen and (max-width: 992px) 
+{
+  .sticky
+  {
+    position:     fixed;
+    top:          0;
+    width:        98.1%;
+    /* height:       3.5%; */
+    /* width: 50%; */
+  }
+}
+/* /////////////////////////// */
+/* On screens that are 600px wide or less.... */
+@media screen and (max-width: 600px) 
+{
+  .sticky
+  {
+    position:     fixed;
+    top:          0;
+    width:        100%;
+    /* height:       5%;   */
+    /* width: 100%; */
+  }
+}
+/* IT ALL WORKS AS INTENDED! NO MORE CLUMPING THE NAVBAR! WOOT! */
+/* /////////////////////////////////////////// */
+
+/* FOR MAKING THE STICKY WORK AS INTENDED */
+
+/* .sticky 
+  {
+    position: fixed;
+    top: 0;
+    width: 74.1%;  
+    /* display: inline-block; 
+
+  } */
+
+
+
+</style>
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <!-- /////////////////////////////////////////////////////// -->
+<!--VS CODE ONLINE EXT. NEEDS A BODY TO WORK. I'M GLAD I HAVE SOMEBODY XD-->
+<body>
+<div class="body-wrapper">
+  <header>
+  
+  <!-- PLEASE STOP MOBILE ZOOMING ON MY WEBPAGE. IT BREAKS THE STICKY!-->
+  <meta name="viewport" content= "user-scalable=no">
+  <!-- DO YOU WANT TO BREAK MY STICKY NAVBAR?? -->
+
+  <link rel="stylesheet" href="m_casual_index.css">
+  
+    <h1 class="main_title text-centre">THE MSTR'S CASUAL WEBSITE</h1>
+    <div class="picheader">
+      <!--WILL CHANGE THIS IMAGE WHEN I FINISH CREATING THE REPLACEMENT & REPRESENTATIVE GFX -->
+      <!-- <img src="proto_empty_image.png" alt="Empty Image" /> -->
+      <img src="proto_main_image.png" alt="Header Image"/>
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <!-- CHANGING THIS TO BUTTONS INSTEAD OF LINKS -> 4 BUTTONS-->
+  <nav id = "navbar" role='navigation'>
+    <button class = 'un_button_1'>BLOG</button>
+    <button class = 'un_button_2'>GAMES</button>
+    <button class = 'un_button_3'>CODE EXAMPLES</button>
+    <button class = 'un_button_4'>CONTACT</button>
+    <!-- <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul> -->
+  </nav>	
+  </header>
+  <!--END ALL HEADER-->
+  <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <main>
+<!-- ////////////////////////////////////////////////////////// -->
+    <!-- THIS ARTICLE WILL SERVE AS A CUT OFF FOR THE STICKY SCROLL -->
+    
+
+    
+    <article>
+        <h1 class="title" style="text-align:center;" >WEBSITE INDEX</h1>
+        <!-- <p>This is a retro web design in HTML5, I want to recreate a typical web page of 90's (approximately '97 '98). There was no javascript, tags like &quot;&lt;font&gt;&quot; or &quot;&lt;color&gt;&quot; and low quality images were used.
+        </p> -->
+      </article>
+
+    <!-- ///////////////////////////////////////////////// -->
+    <article>
+      <h1 class="title">TEST ARTICLE FOR AVAILABLE SCREEN SIZE</h1>
+      <div id = "screen_size"></div>
+      </p>
+    </article>
+
+    <script>
+        var txt = "";
+        txt += "<p> Total width/height: "  + screen.width +  "*"  + screen.height + "</p>";
+        txt += "<p>Available width/height: " + screen.availWidth + "*" + screen.availHeight + "</p>";
+        txt += "<p>Color depth: " + screen.colorDepth + "</p>";
+        txt += "<p>Color resolution: " + screen.pixelDepth + "</p>";
+        
+        document.getElementById("screen_size").innerHTML = txt;
+        </script>
+  <!-- ////////////////////////////////////////////////// -->
+        <article>
+          <!-- TEST ARTICLE FOR HAVING TEXT LEFT AND RIGHT -->
+          <h2 class ="title">
+                  <span class="title_left_side_text" >LEFT TEXT</span>
+                  <!-- <span class="title_right_side_text">RIGHT TEXT</span> -->
+
+                  <span class="title_right_side_text" id = "time_stamp"> DATE/TIME</span>
+          </h2>
+          <p>
+          I hope the text inside this title works as intended.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <!-- TEST BOTTOM 'FOOTER FOR EVERY ARTICLE' -->
+          <h2 class ="article_bottom">TAGS USED:
+              <span class="tag_4">| TAG 4 |</span>
+              <span class="tag_3">| TAG 3 |</span>
+              <span class="tag_2">| TAG 2 |</span>
+              <span class="tag_1">| TAG 1 |</span>
+          </h2>
+        </article>
+
+        <article>
+      <h2 class="title">PLACEHOLDER TEXT</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+      </p>
+      </article>
+
+      <article>
+          <h2 class="title">PLACEHOLDER TEXT_2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          </article>
+
+              <article>
+          <h2 class="title">PLACEHOLDER TEXT_2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+          </p>
+          </article>
+
+          <article>
+              <h2 class="title">PLACEHOLDER TEXT_3</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste quia repellat error, saepe temporibus et neque excepturi blanditiis esse voluptas laudantium vero quos, id velit, totam consequatur aliquid magni.
+              </p>
+              </article>
+  <!-- ////////////////////////////////////////////////// -->
+  <!-- <article>
+      <h2 class="title">Really?</h2>
+      <p>Yes, not all websites looked like this, but this is a little example.</p>
+      <h3>What is the purpose of this?</h3>
+      <p>None, I was bored when it occurred to me to do this &gt;:-(</p>
+          <h4>Hahaha, HTML5 for this sh***</h4>
+          <p>Is there any problem?, send me an e-mail: YouAreWastingYourTime@FakeMailService.com</p>
+      </article> -->
+  <!-- ////////////////////////////////////////////////// -->
+  <!-- <article>
+      <h2 class="title">Really?</h2>
+      <p>Yes, not all websites looked like this, but this is a little example.</p>
+      <h3>What is the purpose of this?</h3>
+      <p>None, I was bored when it occurred to me to do this &gt;:-(</p>
+          <h4>Hahaha, HTML5 for this sh***</h4>
+          <p>Is there any problem?, send me an e-mail: YouAreWastingYourTime@FakeMailService.com</p>
+      </article> -->
+  <!-- ////////////////////////////////////////////////// -->
+  </main>
+
+
+  <!-- ////////////////////////////////////////////////// -->
+   <!-- THE INDEX DOESN'T NEED AN ASIDE SECTION, SO IT'S COMMENTED OUT -->
+  <!-- <aside>
+   	<article>
+			<h3 class="title">This design looks like 90's</h3>
+      <p>Yeah, serif font, header picture, and basic navigation bar. This reminds me a lot if you not haven't internet before 2002, yourself as the idea was, few pictures (with a speed telephone connection delayed up to two minutes to download {depending on the size})</p>
+      <h3 class="title">You like this?</h3>
+      <p>Check it out my others works on my profile and follow me! :-)</p>
+		</article>
+  </aside> -->
+  <!-- //////////////////////////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////// -->
+  <!-- FOOTER PIECES -->
+  <footer>
+	<h3 class="title">THIS IS AN UNEDITED FOOTER. WHAT kinds of things normally go here?</h3>
+  </footer>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////// -->
+
+<!-- TO MAKE THE TIME APPEAR TO BE WORKING AT ALL TIMES WHEN THE WEBSITE HAS FOCUS! -->
+
+<script>
+    var myVar = setInterval(myTimer, 1000);
+    
+    function myTimer() {
+      var d = new Date();
+      document.getElementById("time_stamp").innerHTML = d.toLocaleString();
+    }
+    </script>
+
+
+
+
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- FOR MAKING THE STICKY WORK AS INTENDED -->
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    // var title_p= document.getElementByID("title_piece");
+    var sticky = navbar.offsetTop;
+    // var sticky_2=title_p.offsetTop;
+    
+    function myFunction() 
+    {
+      //For TitlePiece to stick ontop w/out moving outside window
+      // if (window.pageYOffset >= sticky_2) 
+      //   {
+      //     title_p.classList.add("sticky")
+      //   } 
+      //   else 
+      //     {
+      //     title_p.classList.remove("sticky");
+      //     }
+
+      //////////////////////////////////////////////
+      //For Navbar to stick ontop w/out moving outside window
+      if (window.pageYOffset >= sticky) 
+        {
+          navbar.classList.add("sticky")
+          // title_p.classList.add("sticky")
+        } 
+        else 
+          {
+          navbar.classList.remove("sticky");
+          // title_p.classList.remove("sticky");
+          }
+    }
+    // </script>
+    <!-- //////////////////////////////////////////////////////////// -->
+</body>
+
+
+</html>

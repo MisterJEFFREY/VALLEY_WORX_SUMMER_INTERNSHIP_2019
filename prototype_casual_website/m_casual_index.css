@@ -1,0 +1,314 @@
+/* LET'S DO THIS! */
+/* NEED TO CHANGE UP THE BASE CSS */
+
+/* /////////////////////////////////////////////////// */
+
+/* PAGE MASTER PROPERTIES */
+body
+  {
+    /* font-family:'Times New Roman', serif; */
+    text-shadow:        rgba(0,0,0,.01) 0 0 1px;
+    color:              black;
+    background:         darkgreen;
+  }
+
+  .text-centre
+  {
+    text-align:         center;
+    /* color:              green; */
+  }
+.body-wrapper
+  {
+    max-width:          1000px;
+    margin:             0 auto;
+  }
+
+/* /////////////////////////////////////////////////////// */
+
+/* HEADER PROPERTIES */
+
+header 
+  {
+    /* background:         #000; */
+    color:              #fff;
+    overflow:           hidden;
+    padding:            10px auto;
+    /*  */
+    list-style:         none;
+    overflow:           hidden;
+  }
+.picheader
+  {
+    height:             337px;
+    width:              500px;
+    overflow:           hidden;
+    background-color:   darkgreen;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+/* /////////////////////////////////////////////////////// */
+
+
+/* NAV BAR PROPERTIES */
+
+nav
+  {
+    background:         #000;
+    color:              #fff;
+    overflow:           hidden;
+    padding:            10px auto;
+    /*  */
+    list-style:         none;
+    overflow:           hidden;
+    /*  */
+  }
+
+/* /////////////////////////////////////////////////////// */
+
+
+header nav ul li
+  {
+    float:              left;
+    margin-left:        4px;
+    margin-right:       4px;
+  }
+header nav ul li a
+  {
+    color:              white;
+    font-size:          1.2em
+  }
+article
+  {
+    margin:             5px;
+    /* TO PREVENT CUTTOFF W/ STICKY */
+    margin-top:         50px;
+    margin-bottom:      20px;
+    /* CHANGE TOP 2 FOR EVERY WEB PAGE */
+    padding:            5px 0;
+    border:             solid 5px #000;
+    overflow:           hidden;
+    padding-top:        0px;
+    background:         #fff;
+
+    /* CHANGE THE WIDTH IF ADDING ARTICLES OR ADS ON LEFT AND RIGHT SIDES*/
+    width:              145%;
+  }
+/* /////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////// */
+
+/* FOR TESTING TEXT ON LEFT & RITE INSIDE TITLE */
+.title_left_side_text
+  {
+    /* HOLY SMOKES THIS WORKS AS INTEDED! */
+    float: left;
+  }
+
+.title_right_side_text
+  {
+    /* HOLY SMOKES THIS WORKS AS INTEDED! */
+    float:  right;
+  }
+
+/* //////////////////////////////////////////// */
+
+.title
+  {
+    background:         #000;
+    color:              white;
+    padding:            15px;
+    padding-left:       10px;
+    overflow:           hidden;
+    margin:             0px;
+    /* margin-top:         10px; */
+    font-weight:        bolder;
+  }
+
+.main_title
+  {
+    background:         #000;
+    color:              palegreen;
+    padding:            5px;
+    padding-left:       10px;
+    overflow:           hidden;
+    margin:             0;
+    font-weight:        bolder;
+  }
+  /* FOR ADDING 'FOOTER'S FOR ARTICLES */
+  .article_bottom
+  {
+    background:         black;
+    color:              white;
+    padding:            15px;
+    padding-left:       15px;
+    /* padding-top:        10px; */
+    overflow:           hidden;
+    margin:             -6px;
+    /* margin-top:         10px; */
+    font-weight:        bolder;
+  }
+/* ////////////////////////////////////////////////// */
+/* FOR TAGS INSIDE ARTICLE_BOTTOM */
+.tag_1
+  {
+    color:              red;
+    float:                right;
+  }
+
+.tag_2
+  {
+    color:              blue;
+    float:                right;
+  }
+
+.tag_3
+  {
+    color:              green;
+    float:                right;
+  }
+
+.tag_4
+  {
+    color:              yellow;
+    float:                right;
+  }
+
+
+/* ///////////////////////////////////////////////////// */
+
+/* FOR ALL THE BUTTONS INSIDE THE HEADER */
+/* REMEMBER! Xpx = Y, Xpx = X */
+.un_button_1
+  {
+    background:       blue;
+    color:            white;
+    margin-left:        15%;
+    margin-top:         1%;
+    margin-bottom:      1%;
+    /* SIZING OF BOTTONS */
+    padding:            10px 20px;
+    font-size:          2em;
+    border:             10px;
+    /* border-color:       white; */
+  }
+  .un_button_1:hover
+    {
+      cursor:           pointer;  
+    }
+
+  .un_button_1:active
+  {
+    background:          red;
+    border:             0px;
+  }
+/* ///////////////////////////////////////////////////////// */
+  .un_button_2
+  {
+    background:       blue;
+    color:            white;
+    margin-left:        5%;
+    margin-top:         1%;
+    margin-bottom:      1%;
+    /* SIZING OF BOTTONS */
+    padding:            10px 20px;
+    font-size:          2em;
+    border:             1px;
+  }
+  .un_button_2:hover
+  {
+    cursor:           pointer;  
+  }
+  .un_button_2:active
+    {
+      background:          red;
+      border:             0px;
+    }
+/* ///////////////////////////////////////////////////////// */
+  .un_button_3
+  {
+    background:       blue;
+    color:            white;
+    margin-left:        5%;
+    margin-top:         1%;
+    margin-bottom:      1%;
+    /* SIZING OF BOTTONS */
+    padding:            10px 20px;
+    font-size:          2em;
+    border:             1px;
+  }
+  .un_button_3:hover
+    {
+      cursor:           pointer;  
+    }
+
+  .un_button_3:active
+  {
+    background:          red;
+    border:             0px;
+  }
+/* ///////////////////////////////////////////////////////// */
+  .un_button_4
+  {
+    background:       blue;
+    color:            white;
+    margin-left:        5%;
+    margin-top:         1%;
+    margin-bottom:      1%;
+    /* SIZING OF BOTTONS */
+    padding:            10px 20px;
+    font-size:          2em;
+    border:             1px;
+  }
+  .un_button_4:hover
+    {
+      cursor:           pointer;  
+    }
+
+  .un_button_4:active
+    {
+      background:          red;
+      border:             0px;
+    }
+/* ///////////////////////////////////////////////////////// */
+
+/*  THIS 'STICKY' PIECE WORKS, BUT UNFORTUNATELY
+    IT TAKES UP TOO MUCH SPACE ON SCREEN SO I'LL MAKE THE 
+    NAV BAR THE ONLY THING 'STICKY'. I'M JUST GLAD TO MAKE
+    THE STICKY REALLY STICKY
+*/
+/* header
+    {
+      width: 75%;
+      position: fixed;        
+      background: #333;
+    } */
+
+
+
+/* //////////////////////////////////////////////////////// */
+article p, article h1,article h2, article h3, article h4
+  {
+    padding:            0 15px;
+  }
+
+
+main
+  {
+    float:              left;
+    max-width:          68%;
+  }
+aside
+{
+    float:              right;
+    max-width:          32%;
+}
+footer
+{
+    width:              100%;
+    float:              left;
+}
+
+
